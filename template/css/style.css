@@ -1,0 +1,120 @@
+@layer reset, base, components, utilities;
+
+@layer reset {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  img, picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer base {
+  :root {
+    --color-bg: #faf8f5;
+    --color-surface: #ffffff;
+    --color-text: #1e1e24;
+    --color-accent: #2b59c3;
+    --space-1: 0.5rem;  /* 8px */
+    --space-2: 1rem;    /* 16px */
+    --space-3: 1.5rem;  /* 24px */
+    --space-4: 2rem;    /* 32px */
+    --radius-md: 0.75rem;
+    --font-sans: system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms;
+      transition-duration: 0.01ms;
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .container {
+    width: min(100% - 2rem, 75rem);
+    margin-inline: auto;
+  }
+
+  /* Flexbox + CSS Nesting */
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    padding-block: var(--space-2);
+
+    & .nav-list {
+      display: flex;
+      gap: var(--space-2);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    & .btn-primary {
+      margin-left: auto;
+    }
+  }
+
+  /* Защита от переполнения на 320px */
+  .about-text {
+    overflow-wrap: anywhere;
+  }
+
+  /* CSS Grid + :has() для выделения флагманской карточки */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: var(--space-3);
+
+    & .project-card-wrapper:has([data-featured="true"]) {
+      grid-column: 1 / -1;
+      border: 2px solid var(--color-accent);
+      border-radius: var(--radius-md);
+    }
+  }
+
+  /* Container Queries */
+  .project-card-wrapper {
+    container-type: inline-size;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--space-2);
+  }
+
+  @container (min-width: 34rem) {
+    .project-card {
+      flex-direction: row;
+      align-items: center;
+      gap: var(--space-3);
+    }
+  }
+}
