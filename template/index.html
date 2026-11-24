@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Имя Фамилия — Frontend-разработчик</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Имя Фамилия</a>
+      <nav aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#skills">Навыки</a></li>
+        </ul>
+      </nav>
+      <a href="#contacts" class="btn btn-primary">Связаться</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Имя Фамилия — Frontend-разработчик</h1>
+        <p class="hero-lead">Создаю доступные, быстрые и семантически чистые интерфейсы на HTML5 и современном CSS.</p>
+      </div>
+      <figure class="hero-media">
+        <picture>
+          <source srcset="images/portrait.webp" type="image/webp">
+          <img src="images/portrait.jpg" alt="Художественный портрет автора" width="400" height="500">
+        </picture>
+      </figure>
+    </section>
+
+    <section id="about" class="about container" aria-labelledby="about-title">
+      <h2 id="about-title">Обо мне</h2>
+      <div class="about-text">
+        <p>
+          <!-- Минимум 100 слов для уровня PRO + неделимое техническое слово > 40 символов -->
+          Расскажите о вашем бэкграунде и опыте. Пример технического термина для проверки переносов:
+          ContainerQueriesAndCascadeLayersArchitectureTest.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects container" aria-labelledby="projects-title">
+      <h2 id="projects-title">Проекты</h2>
+      <div class="projects-grid">
+        <!-- Карточка 1: Командный макет Figma -->
+        <div class="project-card-wrapper">
+          <article class="project-card">
+            <img src="images/project-1.webp" alt="Превью макета Figma" width="600" height="360" loading="lazy">
+            <div class="project-body">
+              <h3>Командный дизайн-макет (Figma)</h3>
+              <p>Проектирование дизайн-системы, компонентов и адаптивных экранов.</p>
+              <dl class="project-meta">
+                <dt>Роль:</dt><dd>UI-дизайнер / Тимлид</dd>
+                <dt>Стек:</dt><dd>Figma, Auto Layout</dd>
+                <dt>Год:</dt><dd>2026</dd>
+              </dl>
+              <a href="#" target="_blank" rel="noopener noreferrer">Открыть репозиторий</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Карточка 2: Dashboard на Flexbox -->
+        <div class="project-card-wrapper">
+          <article class="project-card">
+            <img src="images/project-2.webp" alt="Превью Dashboard" width="600" height="360" loading="lazy">
+            <div class="project-body">
+              <h3>Аналитический Dashboard</h3>
+              <p>Гибкая панель управления с использованием Flexbox и дизайн-токенов.</p>
+              <dl class="project-meta">
+                <dt>Роль:</dt><dd>Frontend-разработчик</dd>
+                <dt>Стек:</dt><dd>HTML5, Flexbox, CSS Variables</dd>
+                <dt>Год:</dt><dd>2026</dd>
+              </dl>
+              <a href="#" target="_blank" rel="noopener noreferrer">Открыть репозиторий</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Карточка 3: Коммерческая витрина на Grid -->
+        <div class="project-card-wrapper">
+          <article class="project-card">
+            <img src="images/project-3.webp" alt="Превью коммерческой витрины" width="600" height="360" loading="lazy">
+            <div class="project-body">
+              <h3>Коммерческая витрина</h3>
+              <p>Адаптивный каталог товаров на CSS Grid без медиазапросов для сетки.</p>
+              <dl class="project-meta">
+                <dt>Роль:</dt><dd>Frontend-разработчик</dd>
+                <dt>Стек:</dt><dd>HTML5, CSS Grid, A11y</dd>
+                <dt>Год:</dt><dd>2026</dd>
+              </dl>
+              <a href="#" target="_blank" rel="noopener noreferrer">Открыть репозиторий</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Карточка 4: Флагманский пет-проект (анонс для 2 семестра) -->
+        <div class="project-card-wrapper project-featured">
+          <article class="project-card" data-featured="true">
+            <div class="project-body">
+              <span class="badge">В разработке (JS / Семестр 2)</span>
+              <h3>Флагманский пет-проект</h3>
+              <p>Анонс интерактивного веб-приложения из вашей предметной области.</p>
+              <dl class="project-meta">
+                <dt>Статус:</dt><dd>Прототип интерфейса</dd>
+                <dt>Планируемый стек:</dt><dd>HTML5, Modern CSS, Vanilla JS</dd>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <aside id="skills" class="skills container" aria-labelledby="skills-title">
+      <h2 id="skills-title">Навыки и стек</h2>
+      <ul class="skills-list">
+        <li>
+          <strong>Верстка и архитектура</strong>
+          <ul>
+            <li>Семантический HTML5 и доступность (A11y)</li>
+            <li>CSS Grid, Flexbox, Container Queries, Cascade Layers</li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer id="contacts" class="site-footer">
+    <div class="container">
+      <p>© 2026 Имя Фамилия. Сделано на чистом HTML5 &amp; Modern CSS.</p>
+    </div>
+  </footer>
+</body>
+</html>
