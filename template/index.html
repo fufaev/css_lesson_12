@@ -3,137 +3,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личное портфолио фронтенд-разработчика: проекты на HTML5 и Modern CSS">
   <title>Имя Фамилия — Frontend-разработчик</title>
+  <!-- Используем относительный путь без начального слэша для корректной работы в /portfolio/ -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="logo">Имя Фамилия</a>
-      <nav aria-label="Основная навигация">
-        <ul class="nav-list">
-          <li><a href="#about">Обо мне</a></li>
-          <li><a href="#projects">Проекты</a></li>
-          <li><a href="#skills">Навыки</a></li>
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="На главную">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Имя Фамилия</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#about">Обо мне</a></li>
+          <li><a class="site-nav__link" href="#projects">Проекты</a></li>
+          <li><a class="site-nav__link" href="#skills">Навыки</a></li>
         </ul>
       </nav>
-      <a href="#contacts" class="btn btn-primary">Связаться</a>
+
+      <a class="button button--primary site-header__cta" href="#contacts">Связаться</a>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <h1 id="hero-title">Имя Фамилия — Frontend-разработчик</h1>
-        <p class="hero-lead">Создаю доступные, быстрые и семантически чистые интерфейсы на HTML5 и современном CSS.</p>
-      </div>
-      <figure class="hero-media">
-        <picture>
-          <source srcset="images/portrait.webp" type="image/webp">
-          <img src="images/portrait.jpg" alt="Художественный портрет автора" width="400" height="500">
-        </picture>
-      </figure>
-    </section>
-
-    <section id="about" class="about container" aria-labelledby="about-title">
-      <h2 id="about-title">Обо мне</h2>
-      <div class="about-text">
-        <p>
-          <!-- Минимум 100 слов для уровня PRO + неделимое техническое слово > 40 символов -->
-          Расскажите о вашем бэкграунде и опыте. Пример технического термина для проверки переносов:
-          ContainerQueriesAndCascadeLayersArchitectureTest.
-        </p>
-      </div>
-    </section>
-
-    <section id="projects" class="projects container" aria-labelledby="projects-title">
-      <h2 id="projects-title">Проекты</h2>
-      <div class="projects-grid">
-        <!-- Карточка 1: Командный макет Figma -->
-        <div class="project-card-wrapper">
-          <article class="project-card">
-            <img src="images/project-1.webp" alt="Превью макета Figma" width="600" height="360" loading="lazy">
-            <div class="project-body">
-              <h3>Командный дизайн-макет (Figma)</h3>
-              <p>Проектирование дизайн-системы, компонентов и адаптивных экранов.</p>
-              <dl class="project-meta">
-                <dt>Роль:</dt><dd>UI-дизайнер / Тимлид</dd>
-                <dt>Стек:</dt><dd>Figma, Auto Layout</dd>
-                <dt>Год:</dt><dd>2026</dd>
-              </dl>
-              <a href="#" target="_blank" rel="noopener noreferrer">Открыть репозиторий</a>
-            </div>
-          </article>
+  <main id="main-content">
+    <!-- Hero-блок с художественным портретом -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Frontend Developer &bull; HTML5 &amp; Modern CSS</p>
+          <h1 class="hero__title" id="hero-title">Имя Фамилия — создаю быстрые и доступные веб-интерфейсы</h1>
+          <p class="hero__lead">
+            Проектирую семантическую вёрстку, адаптивные дизайн-системы и интерфейсы, одинаково удобные на экране смартфона 320px и широком мониторе.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">Смотреть проекты</a>
+            <a class="button button--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub профиль</a>
+          </div>
         </div>
 
-        <!-- Карточка 2: Dashboard на Flexbox -->
-        <div class="project-card-wrapper">
-          <article class="project-card">
-            <img src="images/project-2.webp" alt="Превью Dashboard" width="600" height="360" loading="lazy">
-            <div class="project-body">
-              <h3>Аналитический Dashboard</h3>
-              <p>Гибкая панель управления с использованием Flexbox и дизайн-токенов.</p>
-              <dl class="project-meta">
-                <dt>Роль:</dt><dd>Frontend-разработчик</dd>
-                <dt>Стек:</dt><dd>HTML5, Flexbox, CSS Variables</dd>
-                <dt>Год:</dt><dd>2026</dd>
-              </dl>
-              <a href="#" target="_blank" rel="noopener noreferrer">Открыть репозиторий</a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Карточка 3: Коммерческая витрина на Grid -->
-        <div class="project-card-wrapper">
-          <article class="project-card">
-            <img src="images/project-3.webp" alt="Превью коммерческой витрины" width="600" height="360" loading="lazy">
-            <div class="project-body">
-              <h3>Коммерческая витрина</h3>
-              <p>Адаптивный каталог товаров на CSS Grid без медиазапросов для сетки.</p>
-              <dl class="project-meta">
-                <dt>Роль:</dt><dd>Frontend-разработчик</dd>
-                <dt>Стек:</dt><dd>HTML5, CSS Grid, A11y</dd>
-                <dt>Год:</dt><dd>2026</dd>
-              </dl>
-              <a href="#" target="_blank" rel="noopener noreferrer">Открыть репозиторий</a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Карточка 4: Флагманский пет-проект (анонс для 2 семестра) -->
-        <div class="project-card-wrapper project-featured">
-          <article class="project-card" data-featured="true">
-            <div class="project-body">
-              <span class="badge">В разработке (JS / Семестр 2)</span>
-              <h3>Флагманский пет-проект</h3>
-              <p>Анонс интерактивного веб-приложения из вашей предметной области.</p>
-              <dl class="project-meta">
-                <dt>Статус:</dt><dd>Прототип интерфейса</dd>
-                <dt>Планируемый стек:</dt><dd>HTML5, Modern CSS, Vanilla JS</dd>
-              </dl>
-            </div>
-          </article>
-        </div>
+        <figure class="hero__media">
+          <picture>
+            <source srcset="images/portrait.webp" type="image/webp">
+            <img
+              src="images/portrait.jpg"
+              alt="Художественный портрет автора портфолио"
+              width="480"
+              height="600"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </picture>
+          <figcaption class="hero__caption">Портрет в технике Soft Pastel / авторская графика</figcaption>
+        </figure>
       </div>
     </section>
 
-    <aside id="skills" class="skills container" aria-labelledby="skills-title">
-      <h2 id="skills-title">Навыки и стек</h2>
-      <ul class="skills-list">
-        <li>
-          <strong>Верстка и архитектура</strong>
-          <ul>
-            <li>Семантический HTML5 и доступность (A11y)</li>
-            <li>CSS Grid, Flexbox, Container Queries, Cascade Layers</li>
-          </ul>
-        </li>
-      </ul>
-    </aside>
+    <!-- Секция «Обо мне» -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about__layout">
+        <h2 class="section__title" id="about-title">Обо мне и бэкграунд</h2>
+        <div class="about__text">
+          <p>
+            Расскажите здесь о своём пути во фронтенд-разработке и о том, как ваш предыдущий опыт (в аналитике, естественных науках, менеджменте, логистике или другой сфере) помогает вам мыслить системно, проектировать понятную архитектуру интерфейсов и внимательно относиться к деталям.
+          </p>
+          <p>
+            Во втором семестре планирую развивать это портфолио, добавляя интерактивные веб-приложения на современном JavaScript и работе с внешними API.
+          </p>
+        </div>
+
+        <!-- Отдельный технический стресс-тест переполнения (для уровня PRO) -->
+        <aside class="stress-box" aria-label="Технический тест переноса длинных строк">
+          <h3 class="stress-box__title">Тест устойчивости сетки (320px)</h3>
+          <p class="stress-box__token">
+            ContainerQueriesAndCascadeLayersArchitectureVerificationToken2026
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Секция «Проекты» (минимум 4 карточки, 4-я — анонс пет-проекта) -->
+    <section class="section section--alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="projects-title">Учебные и пет-проекты</h2>
+          <p class="section__subtitle">Работы первого семестра и анонс флагманского проекта на JavaScript</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Карточка 1 -->
+          <div class="project-slot">
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="images/project-1.webp"
+                  alt="Превью командного макета ДВИЖ или GYMBY"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                >
+              </div>
+              <div class="project-card__body">
+                <span class="badge">Командный проект</span>
+                <h3 class="project-card__title">Макет «ДВИЖ» / «GYMBY»</h3>
+                <p class="project-card__desc">
+                  Адаптивная вёрстка коммерческого лендинга по дизайн-макету Figma с использованием дизайн-токенов и командной работы в Git.
+                </p>
+                <dl class="project-meta">
+                  <div class="project-meta__item">
+                    <dt>Роль</dt>
+                    <dd>Разработка секций и ревью PR</dd>
+                  </div>
+                  <div class="project-meta__item">
+                    <dt>Стек</dt>
+                    <dd>HTML5, CSS Grid, Flexbox</dd>
+                  </div>
+                </dl>
+                <div class="project-card__footer">
+                  <a class="project-card__link" href="https://github.com/" target="_blank" rel="noopener noreferrer">Код на GitHub &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div class="project-slot">
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="images/project-2.webp"
+                  alt="Превью проекта Dashboard на Flexbox"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                >
+              </div>
+              <div class="project-card__body">
+                <span class="badge">Интерфейс</span>
+                <h3 class="project-card__title">Аналитический Dashboard</h3>
+                <p class="project-card__desc">
+                  Панель управления с гибкой раскладкой виджетов, карточками метрик и адаптивной навигацией на базе Flexbox.
+                </p>
+                <dl class="project-meta">
+                  <div class="project-meta__item">
+                    <dt>Фокус</dt>
+                    <dd>Компонентная раскладка</dd>
+                  </div>
+                  <div class="project-meta__item">
+                    <dt>Стек</dt>
+                    <dd>Semantic HTML, Flexbox</dd>
+                  </div>
+                </dl>
+                <div class="project-card__footer">
+                  <a class="project-card__link" href="https://github.com/" target="_blank" rel="noopener noreferrer">Код на GitHub &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="project-slot">
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="images/project-1.webp"
+                  alt="Превью коммерческой витрины на CSS Grid"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                >
+              </div>
+              <div class="project-card__body">
+                <span class="badge">Каталог</span>
+                <h3 class="project-card__title">Коммерческая витрина</h3>
+                <p class="project-card__desc">
+                  Адаптивный каталог товаров без медиазапросов на базе CSS Grid, `auto-fit` и современных функций размеров.
+                </p>
+                <dl class="project-meta">
+                  <div class="project-meta__item">
+                    <dt>Фокус</dt>
+                    <dd>Резиновая сетка без брейкпоинтов</dd>
+                  </div>
+                  <div class="project-meta__item">
+                    <dt>Стек</dt>
+                    <dd>CSS Grid, Custom Properties</dd>
+                  </div>
+                </dl>
+                <div class="project-card__footer">
+                  <a class="project-card__link" href="https://github.com/" target="_blank" rel="noopener noreferrer">Код на GitHub &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Карточка 4 (Флагманский анонс на 2-й семестр) -->
+          <div class="project-slot project-slot--featured">
+            <article class="project-card" data-featured="true">
+              <div class="project-card__media">
+                <img
+                  src="images/project-2.webp"
+                  alt="Концепт будущего JavaScript-приложения"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                >
+              </div>
+              <div class="project-card__body">
+                <span class="badge badge--accent">Анонс &bull; 2 семестр (JS)</span>
+                <h3 class="project-card__title">Флагманский пет-проект: [Название вашего приложения]</h3>
+                <p class="project-card__desc">
+                  Опишите здесь идею интерактивного веб-приложения из вашей предметной области (например, трекер тренировок, визуализатор данных, планировщик бюджета или учебный симулятор), которое вы оживите на JavaScript во втором семестре.
+                </p>
+                <dl class="project-meta">
+                  <div class="project-meta__item">
+                    <dt>Статус</dt>
+                    <dd>Проектирование архитектуры</dd>
+                  </div>
+                  <div class="project-meta__item">
+                    <dt>Будущий стек</dt>
+                    <dd>HTML5, Modern CSS, Vanilla JS / API</dd>
+                  </div>
+                </dl>
+                <div class="project-card__footer">
+                  <a class="project-card__link" href="#contacts">Обсудить идею &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция «Навыки» -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 class="section__title" id="skills-title">Технический стек и инструменты</h2>
+        <ul class="skills-list">
+          <li class="skill-group">
+            <h3 class="skill-group__title">Разметка и доступность</h3>
+            <ul>
+              <li>Семантический HTML5 и структура документа</li>
+              <li>Доступность с клавиатуры (`:focus-visible`, `skip-link`)</li>
+              <li>Адаптивная графика (`&lt;picture&gt;`, `.webp`)</li>
+            </ul>
+          </li>
+          <li class="skill-group">
+            <h3 class="skill-group__title">Современный CSS</h3>
+            <ul>
+              <li>Дизайн-токены (`:root`) и каскадные слои (`@layer`)</li>
+              <li>CSS Grid, Flexbox и Container Queries (`@container`)</li>
+              <li>Нативная вложенность (CSS Nesting)</li>
+            </ul>
+          </li>
+          <li class="skill-group">
+            <h3 class="skill-group__title">Инфраструктура</h3>
+            <ul>
+              <li>Git и командная работа через Pull Requests</li>
+              <li>Публикация и деплой на GitHub Pages</li>
+              <li>Аудит в браузерных DevTools</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <footer id="contacts" class="site-footer">
-    <div class="container">
-      <p>© 2026 Имя Фамилия. Сделано на чистом HTML5 &amp; Modern CSS.</p>
+  <footer class="site-footer" id="contacts">
+    <div class="container site-footer__inner">
+      <div>
+        <h2 class="site-footer__title">Открыт(а) к стажировкам и учебным проектам</h2>
+        <p class="site-footer__text">Свяжитесь со мной удобным способом:</p>
+      </div>
+      <ul class="contacts-list">
+        <li><a href="mailto:student@example.com">student@example.com</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://t.me" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+      </ul>
     </div>
   </footer>
 </body>
